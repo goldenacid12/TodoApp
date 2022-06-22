@@ -6,22 +6,94 @@
     android:layout_height="match_parent"
     tools:context=".screen.DetailActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/menu_bar"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleEditTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/detailEdTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="@string/title"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColorHint="#757575" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descEditTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="155dp"
+        android:layout_margin="20dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleEditTextLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/detailEdDescription"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="top"
+            android:hint="@string/enter_desc"
+            android:inputType="text"
+            android:maxLines="5"
+            android:textColorHint="#757575" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateEditTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descEditTextLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/detailEdDueDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="top"
+            android:hint="@string/due_date"
+            android:inputType="date"
+            android:maxLines="5"
+            android:textColorHint="#757575" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/dateEditTextLayout"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/holo_red_light"
+        android:text="@string/delete_task"/>
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:title="@string/add_task"
-            app:menu="@menu/detail_menu"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary" />
 
-    </com.google.android.material.appbar.AppBarLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

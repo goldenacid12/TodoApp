@@ -6,23 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".screen.AddTaskActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/menu_bar"
-        android:layout_width="match_parent"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleEditTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/topAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:title="@string/add_task"
-        app:menu="@menu/add_menu"
-        style="@style/Widget.MaterialComponents.Toolbar.Primary" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addEdTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/title"
+            android:inputType="text"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descEditTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="155dp"
+        android:layout_margin="20dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleEditTextLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addEdDescription"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:ems="10"
+            android:hint="@string/enter_desc"
+            android:inputType="text"
+            android:gravity="top"
+            android:maxLines="5"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/dateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/descEditTextLayout"
+        app:layout_constraintTop_toBottomOf="@id/descEditTextLayout"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_date"
+        android:contentDescription="@string/date"/>
+
+    <TextView
+        android:id="@+id/dateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/dateButton"
+        app:layout_constraintBottom_toBottomOf="@id/dateButton"
+        app:layout_constraintStart_toEndOf="@id/dateButton"
+        android:text="@string/date_view"
+        />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

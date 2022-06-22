@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="pink">#FF5383</color>
     <color name="mint">#15C4C5</color>
+    <color name="holo_red_light">#FE4543</color>
 </resources>

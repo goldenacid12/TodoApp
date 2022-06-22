@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="@+id/itemCheckbox"
         app:layout_constraintBottom_toBottomOf="@+id/itemCheckbox"
         app:layout_constraintStart_toEndOf="@+id/itemCheckbox"
-        android:text="Belajar AAD"
+        android:text="@string/belajar_aad"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         android:maxLines="1"
         />
@@ -32,6 +32,6 @@
         app:layout_constraintTop_toTopOf="@id/itemCheckbox"
         app:layout_constraintBottom_toBottomOf="@id/itemCheckbox"
         android:layout_margin="20dp"
-        android:text="01/01/2022"/>
+        android:text="@string/date_value"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

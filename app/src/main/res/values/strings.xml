@@ -7,4 +7,15 @@
     <string name="save">Save</string>
     <string name="add_task">Add Task</string>
     <string name="back">Back</string>
+    <string name="title">Title</string>
+    <string name="enter_desc">Enter your description here.</string>
+    <string name="date">date</string>
+    <string name="date_view">01/01/2020</string>
+    <string name="belajar_aad">Belajar AAD</string>
+    <string name="due_date">Due date</string>
+    <string name="delete_task">DELETE TASK</string>
+    <string name="reminder">Reminder</string>
+    <string name="notification">Notification</string>
+    <string name="sub_notification">Daily reminder for nearest active task.</string>
+    <string name="date_value">01/01/2022</string>
 </resources>
