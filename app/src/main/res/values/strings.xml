@@ -18,4 +18,5 @@
     <string name="notification">Notification</string>
     <string name="sub_notification">Daily reminder for nearest active task.</string>
     <string name="date_value">01/01/2022</string>
+    <string name="field_blank">Field can\'t be blank</string>
 </resources>

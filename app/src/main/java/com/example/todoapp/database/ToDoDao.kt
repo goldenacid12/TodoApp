@@ -3,6 +3,7 @@ package com.example.todoapp.database
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
+@Dao
 interface ToDoDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insert(toDo: ToDoList)

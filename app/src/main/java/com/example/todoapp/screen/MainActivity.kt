@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupAction(){
+        supportActionBar?.title = getString(R.string.todo_app)
         binding.recycler.layoutManager = LinearLayoutManager(this)
         val listAdapter = ListAdapter()
 
