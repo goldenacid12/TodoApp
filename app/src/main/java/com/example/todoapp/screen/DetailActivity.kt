@@ -33,4 +33,8 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = getString(R.string.todo_app)
     }
+
+    companion object{
+        const val EXTRA_TODO = "extra"
+    }
 }
