@@ -5,10 +5,14 @@ import androidx.lifecycle.ViewModel
 import com.example.todoapp.database.ToDoList
 import com.example.todoapp.repository.ToDoRepository
 
-class AddToDoViewModel(application: Application): ViewModel() {
+class DetailViewModel(application: Application): ViewModel() {
     private val mToDoRepository: ToDoRepository = ToDoRepository(application)
 
-    fun insert(todo: ToDoList){
-        mToDoRepository.insert(todo)
+    fun update(todo: ToDoList){
+        mToDoRepository.update(todo )
+    }
+
+    fun delete(todo: ToDoList){
+        mToDoRepository.delete(todo)
     }
 }
