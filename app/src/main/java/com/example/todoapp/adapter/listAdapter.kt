@@ -44,9 +44,10 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ToDoViewHolder>() {
                 binding.taskDate.text = toDo.date
                 val title = binding.title
                 val check = binding.itemCheckbox
-                if (check.isChecked){
+                check.setOnCheckedChangeListener { compoundButton, b ->
                     title.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
                 }
+
                 listToDo.setOnClickListener {
                     val intent = Intent(it.context, DetailActivity::class.java)
                     intent.putExtra(DetailActivity.EXTRA_TODO, toDo)
