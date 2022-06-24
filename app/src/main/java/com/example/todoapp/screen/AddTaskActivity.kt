@@ -2,6 +2,7 @@ package com.example.todoapp.screen
 
 import android.app.DatePickerDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -28,10 +29,9 @@ class AddTaskActivity : AppCompatActivity() {
         _activityAddTaskBinding = ActivityAddTaskBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        addToDoViewModel = obtainViewModel(this)
+        addToDoViewModel = obtainViewModel(this@AddTaskActivity)
 
-        toDo = intent.getParcelableExtra(EXTRA_TODO)
-
+        setupAction()
 
     }
 
@@ -52,6 +52,11 @@ class AddTaskActivity : AppCompatActivity() {
                 val title = binding?.addEdTitle?.text.toString().trim()
                 val desc = binding?.addEdDescription?.text.toString().trim()
                 val date = binding?.dateView?.text.toString().trim()
+                Log.d("title", title)
+                Log.d("desc", desc)
+                Log.d("date", date)
+
+                toDo = ToDoList()
 
                 when{
                     title.isEmpty() -> {
@@ -60,16 +65,20 @@ class AddTaskActivity : AppCompatActivity() {
                     desc.isEmpty() -> {
                         binding?.addEdDescription?.error = getString(R.string.field_blank)
                     }
+                    date.isEmpty() -> {
+                        binding?.dateView?.text = getString(R.string.field_blank)
+                    }
                     else -> {
                         toDo.let{ toDo ->
                             toDo?.title = title
                             toDo?.description = desc
                             toDo?.date = date
                         }
+                        toDo?.let { addToDoViewModel.insert(it) }
+                        finish()
                     }
                 }
-                addToDoViewModel.insert(toDo as ToDoList)
-                finish()
+
                 true
             }
             else -> true
@@ -92,6 +101,10 @@ class AddTaskActivity : AppCompatActivity() {
         }, y, m, d)
         dpd.datePicker.minDate = System.currentTimeMillis()
         dpd.show()
+    }
+
+    private fun setupAction(){
+        supportActionBar?.title = getString(R.string.add_task)
     }
 
     companion object{
