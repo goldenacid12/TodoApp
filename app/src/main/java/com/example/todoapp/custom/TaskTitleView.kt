@@ -1,11 +1,8 @@
 package com.example.todoapp.custom
 
 import android.content.Context
-import android.graphics.Paint
 import android.util.AttributeSet
-import android.widget.CheckBox
 import androidx.appcompat.widget.AppCompatTextView
-import com.example.todoapp.R
 
 class TaskTitleView : AppCompatTextView {
     constructor(context: Context) : super(context) {

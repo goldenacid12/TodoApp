@@ -1,13 +1,12 @@
 package com.example.todoapp.screen
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.todoapp.R
 import com.example.todoapp.database.ToDoList
 import com.example.todoapp.databinding.ActivityDetailBinding
-import com.example.todoapp.viewmodel.AddToDoViewModel
 import com.example.todoapp.viewmodel.DetailViewModel
 import com.example.todoapp.viewmodel.ViewModelFactory
 
